@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kelompok 11 - Desain UI/UX & Pemrograman Web</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #eef0f3;
+      color: #2b2f36;
+      line-height: 1.5;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #d3d6db;
+      text-align: center;
+      padding: 32px 16px 28px;
+      border-bottom: 1px solid #c2c6cc;
+    }
+    header .logo { font-size: 40px; }
+    header h1 { font-size: 40px; margin-top: 4px; }
+    header p { color: #555b64; margin-top: 4px; }
+    header hr {
+      width: 36px; border: 0; border-top: 3px solid #555b64;
+      margin: 12px auto 0;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* ===== INTRO ===== */
+    .intro {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #fff;
+      border: 1px solid #d3d6db;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .intro .icon {
+      flex: 0 0 56px; height: 56px;
+      border-radius: 50%;
+      background: #d3d6db;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+    }
+    .intro h2 { font-size: 18px; margin-bottom: 4px; }
+    .intro p { font-size: 14px; color: #555b64; }
+
+    /* ===== GRID KARTU ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #d3d6db;
+      border-radius: 10px;
+      padding: 18px;
+    }
+
+    .card-top {
+      display: flex;
+      gap: 18px;
+    }
+
+    .foto {
+      flex: 0 0 140px;
+      height: 130px;
+      background: #e3e5e9;
+      border: 1px solid #c2c6cc;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .foto img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info { flex: 1; min-width: 0; }
+
+    .nama-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .nama-row h3 { font-size: 18px; }
+    .role {
+      font-size: 12px;
+      background: #e3e5e9;
+      border: 1px solid #c2c6cc;
+      border-radius: 999px;
+      padding: 2px 12px;
+      color: #444a53;
+    }
+
+    table.biodata { font-size: 13px; border-collapse: collapse; width: 100%; }
+    table.biodata td { padding: 2px 0; vertical-align: top; }
+    table.biodata td:first-child { width: 80px; color: #555b64; }
+    table.biodata td:nth-child(2) { width: 12px; }
+
+    .deskripsi {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 14px;
+      background: #f3f4f6;
+      border: 1px solid #e0e2e6;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 13px;
+      color: #444a53;
+    }
+    .deskripsi .kotak {
+      flex: 0 0 22px; height: 22px;
+      background: #c9ccd2;
+      border-radius: 4px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #e3e5e9;
+      border-top: 1px solid #c2c6cc;
+      text-align: center;
+      padding: 16px;
+      font-size: 13px;
+      color: #555b64;
+    }
+
+    /* ===== RESPONSIF ===== */
+    @media (max-width: 800px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .card-top { flex-direction: column; }
+      .foto { flex-basis: auto; width: 100%; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">👥</div>
+    <h1>Kelompok 11</h1>
+    <p>Desain UI/UX &amp; Pemrograman Web</p>
+    <hr>
+  </header>
+
+  <main>
+    <!-- INTRO -->
+    <section class="intro">
+      <div class="icon">👥</div>
+      <div>
+        <h2>Intro</h2>
+        <p>Kami adalah Kelompok 11 yang terdiri dari lima anggota. Halaman ini memperkenalkan masing-masing anggota beserta peran dan biodatanya dalam proyek Desain UI/UX &amp; Pemrograman Web.</p>
+      </div>
+    </section>
+
+    <!-- KARTU ANGGOTA -->
+    <section class="grid">
+
+      <!-- Anggota 1 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="foto"><img src="img/fauzi.jpeg" alt="Foto Nama Anggota 1"></div>
+          <div class="info">
+            <div class="nama-row">
+              <h3>M.Fauzi</h3>
+              <span class="role">Ketua</span>
+            </div>
+            <table class="biodata">
+              <tr><td>NIM</td><td>:</td><td>0110226077</td></tr>
+              <tr><td>MINAT</td><td>:</td><td>Artificial Intelligence</td></tr>
+              <tr><td>HOBI</td><td>:</td><td>Workout dan Tenis Meja</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="deskripsi">
+          <div class="kotak"></div>
+        </div>
+      </article>
+
+      <!-- Anggota 2 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="foto"><img src="img/firas.jpeg" alt="Foto Nama Anggota 2"></div>
+          <div class="info">
+            <div class="nama-row">
+              <h3>Muhammad Firas Alfairobi</h3>
+              <span class="role">Anggota</span>
+            </div>
+            <table class="biodata">
+              <tr><td>NIM</td><td>:</td><td>0110226028</td></tr>
+              <tr><td>MINAT</td><td>:</td><td>Cyber Security</td></tr>
+              <tr><td>HOBI</td><td>:</td><td>Hiking</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="deskripsi">
+          <div class="kotak"></div>
+        </div>
+      </article>
+
+      <!-- Anggota 3 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="foto"><img src="img/hafi.jpeg" alt="Foto Nama Anggota 3"></div>
+          <div class="info">
+            <div class="nama-row">
+              <h3>Muhammad Bisyrul Hafi</h3>
+              <span class="role">Anggota</span>
+            </div>
+            <table class="biodata">
+              <tr><td>NIM</td><td>:</td><td>0110226130</td></tr>
+              <tr><td>MINAT</td><td>:</td><td>Cyber Security</td></tr>
+              <tr><td>HOBI</td><td>:</td><td>Badminton dan Futsal</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="deskripsi">
+          <div class="kotak"></div>
+        </div>
+      </article>
+
+      <!-- Anggota 4 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="foto"><img src="img/sabil.jpeg" alt="Foto Nama Anggota 4"></div>
+          <div class="info">
+            <div class="nama-row">
+              <h3>Muhammad Dandi Sabil</h3>
+              <span class="role">Anggota</span>
+            </div>
+            <table class="biodata">
+              <tr><td>NIM</td><td>:</td><td>0110226185</td></tr>
+              <tr><td>MINAT</td><td>:</td><td>Cyber Security</td></tr>
+              <tr><td>HOBI</td><td>:</td><td>Basket dan Futsal</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="deskripsi">
+          <div class="kotak"></div>
+        </div>
+      </article>
+
+      <!-- Anggota 5 -->
+      <article class="card">
+        <div class="card-top">
+          <div class="foto"><img src="img/athar.jpeg" alt="Foto dan Nama Anggota 5"></div>
+          <div class="Info">
+            <div class="nama-row">
+              <h3>Muhammad Fathar Ikhsan</h3>
+              <span class="role">Anggota</span>
+            </div>
+            <table class="biodata">
+              <tr><td>NIM</td><td>:</td><td>0110226034</td></tr>
+              <tr><td>MINAT</td><td>:</td><td>Cyber Security</td></tr>
+              <tr><td>HOBI</td><td>:</td><td>Baca Komik Marvel dan DC</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="deskripsi">
+          <div class="kotak"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; STT TERPADU NURUL FIKRI &ndash; Desain UI/UX Semester 1 - 2026
+  </footer>
+
+</body>
+</html>
